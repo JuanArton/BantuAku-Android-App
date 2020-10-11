@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainMenu"
+    android:background="#ffedd7"
+    >
+
+    <RelativeLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffedd7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#f68e56">
+
+            <ImageView
+                android:id="@+id/ProfileLogo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/bulatputih">
+            </ImageView>
+
+            <SearchView
+                android:id="@+id/searchbar"
+                android:iconifiedByDefault="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="90dp"
+                android:searchIcon="@null"
+                android:searchHintIcon="@null"
+                android:queryHint="Search"
+                android:textColor="#fff"
+                android:background="@drawable/bg_rounded"
+                android:queryBackground="@null"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                >
+            </SearchView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/RLayout"
+            android:background="#ffffff"
+            android:layout_below="@+id/searchLayout">
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:fontFamily="@font/righteous"
+                android:gravity="center"
+                android:text="Ayo!! \n Bergabung bersama kami \nUntuk membantu sesama manusia yang \nmembutuhkan bantuan dari kesulitan."
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/RegisterButton"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Daftar Sekarang"
+                android:textColor="#fff"
+                android:layout_marginTop="-4dp"
+                android:layout_below="@id/greeting"
+                android:layout_centerHorizontal="true"
+                android:background="#00aeef"
+                android:fontFamily="@font/righteous"
+                android:textAllCaps="false"/>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="8dp"
+            android:layout_below="@+id/RLayout"
+            android:background="#ffedd8"
+            android:paddingBottom="8dp"
+            app:layout_constraintVertical_bias="0.0">
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+</ScrollView>

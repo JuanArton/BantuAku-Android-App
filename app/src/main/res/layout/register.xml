@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d1e5ec"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#00aeef"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ProfileLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/bulatputih">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="105dp"
+            android:fontFamily="@font/righteous"
+            android:text="Formulir Pendaftaran"
+            android:textColor="#fff"
+            android:textSize="28sp">
+        </TextView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Send"
+        android:layout_below="@+id/RelLayout">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelLayout"
+            app:layout_constraintTop_toBottomOf="@+id/RelLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/pickedImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-30dp"
+                android:fontFamily="@font/righteous"
+                android:hint="Pilih Gambar"></TextView>
+
+            <ImageView
+                android:id="@+id/pickedImage"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="15dp"
+                android:background="#fff"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/selectimage"></ImageView>
+
+            <EditText
+                android:id="@+id/dataName"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/pickedImage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:hint="Nama..."
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
+
+            <EditText
+                android:id="@+id/dataLayanan"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dataName"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:hint="Layanan yang ditawarkan..."
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences|textMultiLine"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
+
+            <EditText
+                android:id="@+id/dataDeskripsi"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/dataLayanan"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:gravity="top"
+                android:hint="Deskripsi..."
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences|textMultiLine"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textSize="12sp"></EditText>
+
+            <EditText
+                android:id="@+id/dataEmail"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dataDeskripsi"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:hint="Email..."
+                android:inputType="textCapSentences|textMultiLine"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="12sp"></EditText>
+
+            <EditText
+                android:id="@+id/dataWhatsapp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dataEmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:hint="Whatsapp..."
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences|textMultiLine"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="12sp"></EditText>
+
+            <EditText
+                android:id="@+id/dataNumber"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/dataWhatsapp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="#fff"
+                android:fontFamily="@font/righteous"
+                android:hint="Handphone..."
+                android:importantForAutofill="no"
+                android:inputType="textCapSentences|textMultiLine"
+                android:justificationMode="inter_word"
+                android:padding="8dp"
+                android:textColor="#000000"
+                android:textSize="12sp"></EditText>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/Send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#f7d0a6"
+        android:fontFamily="@font/righteous"
+        android:text="Kirim"
+        android:textAllCaps="false"
+        android:textColor="#d1e5ec"
+        android:textSize="17sp">
+    </Button>
+
+</RelativeLayout>

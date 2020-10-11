@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d1e5ec"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#00aeef"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ProfileLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/bulatputih">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="105dp"
+            android:fontFamily="@font/righteous"
+            android:text="Formulir Pendaftaran"
+            android:textColor="#fff"
+            android:textSize="28sp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelLayout"
+        android:background="#fff"
+        app:layout_constraintTop_toBottomOf="@+id/RelLayout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/thankyou"
+            android:fontFamily="@font/righteous"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Setelah mengirim formulir \nProfil anda akan segera diproses oleh admin kami. \nTerimakasih telah bergabung."
+            android:textColor="#000000"
+            android:textSize="15sp">
+        </TextView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Mainmenu"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:background="#fbaf5d"
+        android:fontFamily="@font/righteous"
+        android:text="Menu Utama"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RelativeLayout">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
